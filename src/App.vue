@@ -1,27 +1,23 @@
 <template>
   <main>
-    <mindmap v-model="data"></mindmap>
+    <div  class="mindmap">
+      <mindmap v-model="data" branch="1"></mindmap>
+    </div>
   </main>
 </template>
 <script lang="ts" setup>
 import mindmap from "vue3-mindmap";
 import "vue3-mindmap/dist/style.css";
+import mindMapJson from "@/assets/mindmap.json"
 
-let data = [
-  {
-    name: "学习导图",
-    children: [
-      {
-        name: "预备知识",
-        children: [{ name: "HTML & CSS" }, { name: "JavaScript" }],
-      },
-      {
-        name: "安装",
-        collapse: true,
-        children: [{ name: "折叠节点" }],
-      },
-      { name: "进阶", left: true },
-    ],
-  },
-];
+let data =mindMapJson;
 </script>
+<style>
+.mindmap{
+  float: left;
+  margin-top: 20vh;
+  width: 100vw;
+  height: 60vh;
+  font-size:smaller
+}
+</style>

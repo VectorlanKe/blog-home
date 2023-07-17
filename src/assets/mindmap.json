@@ -1,0 +1,16 @@
+[
+    {
+      "name": "学习导图",
+      "children": [
+        {
+          "name": "预备知识",
+          "children": [{ "name": "HTML & CSS" }, { "name": "JavaScript" }]
+        },
+        {
+          "name": "安装",
+          "children": [{ "name": "折叠节点" }]
+        },
+        { "name": "进阶", "left": true }
+      ]
+    }
+  ]
