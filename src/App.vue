@@ -1,7 +1,7 @@
 <template>
   <main>
     <div class="mindmap">
-      <mindmap v-model="data" branch="1"></mindmap>
+      <mindmap v-model="data" branch="2"></mindmap>
     </div>
     <div class="entrance-root">
       <div class="entrance" @click="blankBlog()">进入博客</div>
