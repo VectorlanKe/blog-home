@@ -8,7 +8,7 @@
     </div>
     <footer>
       <div>
-        <img src="../public/备案图标.png"/>
+        <img src="../public/备案图标.png" />
         <a
           href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51012202001211"
           target="_blank"
@@ -24,6 +24,7 @@
 <script lang="ts" setup>
 import mindmap from "vue3-mindmap";
 import "vue3-mindmap/dist/style.css";
+import "@/assets/stars.css";
 import mindMapJson from "@/assets/mindmap.json";
 let data = mindMapJson;
 function blankBlog(): void {
@@ -31,7 +32,11 @@ function blankBlog(): void {
 }
 </script>
 <style lang="less">
+main{
+  color: #fff;
+}
 .mindmap {
+  position: fixed;
   float: left;
   margin-top: 20vh;
   width: 100vw;
@@ -40,14 +45,22 @@ function blankBlog(): void {
 
 .mindmap svg {
   background: none;
-  .Mindmap_text_fgvb6 > rect {
-    stroke: beige;
+  tspan{
+    fill: #fff;
+  }
+  .Mindmap_root_fgvb6>.Mindmap_content_fgvb6>.Mindmap_text_fgvb6 {
+    rect{
+      stroke: #dcdcdc;
+    }
+    text>tspan{
+      fill: #000;
+    }
   }
 }
 .entrance-root {
   position: fixed;
   width: 100%;
-  bottom: 300px;
+  bottom: 250px;
 }
 .entrance {
   position: relative;
@@ -57,7 +70,6 @@ function blankBlog(): void {
   line-height: 40px;
   text-align: center;
   font-size: 1em;
-  color: #5c5c5c;
   border: 1px solid #888888;
   border-radius: 0.5em;
   cursor: pointer;
@@ -70,17 +82,20 @@ function blankBlog(): void {
 footer {
   position: fixed;
   width: 100%;
-  bottom: 10px;
+  bottom: 50px;
   div {
     width: 474px;
     margin: 0 auto;
-    img{
+    img {
       float: left;
       margin: 1px 4px;
     }
   }
-  a,a:link,a:visited,a:active{
-    color: #424242;
+  a,
+  a:link,
+  a:visited,
+  a:active {
+    color: #fff;
     text-decoration: none;
   }
 }
