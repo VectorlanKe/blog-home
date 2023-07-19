@@ -1,7 +1,7 @@
 <template>
   <main>
     <div class="mindmap">
-      <mindmap v-model="data" branch="2"></mindmap>
+      <mindmap v-model="data" branch="2" zoom="true"></mindmap>
     </div>
     <div class="entrance-root">
       <div class="entrance" @click="blankBlog()">进入博客</div>
@@ -28,7 +28,7 @@ import "@/assets/stars.css";
 import mindMapJson from "@/assets/mindmap.json";
 let data = mindMapJson;
 function blankBlog(): void {
-  window.open("https://blog.vectorluo.top");
+  window.open("https://blog.vectorluo.top",'_self');
 }
 </script>
 <style lang="less">
@@ -38,9 +38,14 @@ main{
 .mindmap {
   position: fixed;
   float: left;
-  margin-top: 20vh;
-  width: 100vw;
+  width: 100%;
+  height: 80vh;
   font-size: 0.8em;
+  overflow:visible;
+  cursor:grab;
+}
+.mindmap:active{
+  cursor:grabbing;
 }
 
 .mindmap svg {
@@ -60,7 +65,7 @@ main{
 .entrance-root {
   position: fixed;
   width: 100%;
-  bottom: 250px;
+  bottom: 120px;
 }
 .entrance {
   position: relative;
@@ -82,7 +87,7 @@ main{
 footer {
   position: fixed;
   width: 100%;
-  bottom: 50px;
+  bottom: 25px;
   div {
     width: 474px;
     margin: 0 auto;

@@ -1,16 +1,295 @@
 [
-    {
-      "name": "思维导图",
-      "children": [
-        {
-          "name": "预备知识",
-          "children": [{ "name": "HTML & CSS" }, { "name": "JavaScript" }]
-        },
-        {
-          "name": "安装",
-          "children": [{ "name": "折叠节点" }]
-        },
-        { "name": "进阶", "left": true }
-      ]
-    }
-  ]
+  {
+    "name": "思维导图",
+    "children": [
+      {
+        "name": "计算机",
+        "left": true,
+        "children": [
+          {
+            "name": "计算机原理"
+          },
+          {
+            "name": "网络拓扑"
+          }
+        ]
+      },
+      {
+        "name": "网络通讯",
+        "left": true,
+        "children": [
+          {
+            "name": "网络协议"
+          }
+        ]
+      },
+      {
+        "name": "C#",
+        "left": true,
+        "children": [
+          {
+            "name": "CLR底层原理"
+          },
+          {
+            "name": "C#7本质论"
+          },
+          {
+            "name": "常用组件",
+            "collapse": true,
+            "children": [
+              {
+                "name": "Autofac"
+              },
+              {
+                "name": "IdentityServer"
+              },
+              {
+                "name": "Mapster"
+              },
+              {
+                "name": "AutoMapper"
+              },
+              {
+                "name": "FreeSql"
+              },
+              {
+                "name": "Dapper"
+              },
+              {
+                "name": "EF"
+              },
+              {
+                "name": "web api",
+                "children": [
+                  {
+                    "name": "Swagger"
+                  },
+                  {
+                    "name": "Version"
+                  }
+                ]
+              },
+              {
+                "name": "console",
+                "children": [
+                  {
+                    "name": "Terminal.Gui"
+                  }
+                ]
+              },
+              {
+                "name": "wpf/winfrom",
+                "children": [
+                  {
+                    "name": "HandyControl"
+                  },
+                  {
+                    "name": "NanUi"
+                  },
+                  {
+                    "name": "wpfui"
+                  },
+                  {
+                    "name": "inno setup打包"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name":"架构设计",
+        "left":true,
+        "children":[
+          {"name":"设计模式"},
+          {"name":"分层"},
+          {"name":"MVC/MVVM"},
+          {"name":"六边形"},
+          {"name":"领域驱动"}
+        ]
+      },
+      {
+        "name":"算法",
+        "left":true,
+        "children":[
+          {"name":"递归"},
+          {"name":"冒泡"},
+          {"name":"雪花"},
+          {"name":"布隆"}
+        ]
+      },
+      {
+        "name": "组件服务",
+        "children": [
+          {
+            "name": "数据持久化",
+            "collapse": true,
+            "children": [
+              {
+                "name": "mysql"
+              },
+              {
+                "name": "mssql"
+              },
+              {
+                "name": "oracle"
+              }
+            ]
+          },
+          {
+            "name": "数据缓存",
+            "collapse": true,
+            "children": [
+              {
+                "name": "redis"
+              },
+              {
+                "name": "mongodb"
+              },
+              {
+                "name": "memory"
+              }
+            ]
+          },
+          {
+            "name": "消息队列",
+            "collapse": true,
+            "children": [
+              {
+                "name": "rabbitmq"
+              },
+              {
+                "name": "rocketmq"
+              },
+              {
+                "name": "kafka"
+              },
+              {
+                "name": "activemq"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "微服务",
+        "collapse":true,
+        "children": [
+          {
+            "name": "容器",
+            "children": [
+              {
+                "name": "docker"
+              },
+              {
+                "name": "containerd",
+                "children":[
+                  {"name":"ctr"}
+                ]
+              },
+              {
+                "name": "kubernetes",
+                "children":[
+                  {"name":"helm"}
+                ]
+              },
+              {
+                "name": "dashboard",
+                "children":[
+                  {"name":"Portainer"},
+                  {"name":"kuboard"},
+                  {"name":"kubernetes dashboard"}
+                ]
+              }
+            ]
+          },
+          {
+            "name": "rpc",
+            "children":[
+              {"name":"gRpc"},
+              {"name":"thrift"}
+            ]
+          },
+          {
+            "name": "事件总线程"
+          },
+          {
+            "name": "配置中心/服务发现",
+            "children":[
+              {"name":"consul"},
+              {"name":"nacos"},
+              {"name":"apollo"}
+            ]
+          },
+          {
+            "name": "网关",
+            "children":[
+              {"name":"ocelot"},
+              {"name":"kong"}
+            ]
+          },
+          {
+            "name": "Istio 服务网格"
+          },
+          {
+            "name": "dapr 分布式运行时"
+          },
+          {
+            "name": "链路跟踪",
+            "children":[
+              {"name":"SkyWalking"},
+              {"name":"Zipkin"}
+            ]
+          },
+          {
+            "name": "日志收集",
+            "children":[
+              {"name":"Fluentd"},
+              {"name":"ELK"},
+              {"name":"Exceptionless"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "部署",
+        "children": [
+          {
+            "name": "iis部署"
+          },
+          {
+            "name": "nginx"
+          },
+          {
+            "name": "容器部署"
+          },{
+            "name":"Jenkins"
+          },{
+            "name":"zadig"
+          }
+        ]
+      },
+      {
+        "name": "运维",
+        "children": [
+          {
+            "name": "宝塔"
+          },
+          {
+            "name": "keepalived+haproxy"
+          },
+          {
+            "name": "Ansible"
+          },
+          {
+            "name": "zabbix"
+          },
+          {
+            "name": "Spug"
+          }
+        ]
+      }
+    ]
+  }
+]
